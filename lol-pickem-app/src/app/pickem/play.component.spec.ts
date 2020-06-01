@@ -3,6 +3,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpUrlEncodingCodec } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PickemComponent } from './pickem.component';
 import { LolPickemService } from '../shared/lol-pickem.service';
@@ -13,7 +16,7 @@ describe('PickemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [RouterTestingModule, HttpClientTestingModule, MatButtonModule, MatButtonToggleModule, BrowserAnimationsModule],
       declarations: [PickemComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [LolPickemService, HttpUrlEncodingCodec]
